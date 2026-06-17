@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShieldAI — Segurança inteligente para APIs de IA. Proteja seus modelos contra prompts maliciosos, jailbreaks e acessos não autorizados." />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <title>ShieldAI — Segurança para APIs de IA</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/features.css" />
+  <link rel="stylesheet" href="assets/css/pricing.css" />
+  <link rel="stylesheet" href="assets/css/form.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">
+        <img src="assets/images/logo.png" alt="ShieldAI" class="navbar__logo-img" />
+      </a>
+
+      <ul class="navbar__links" id="navbar-links">
+        <li><a href="#features" class="navbar__link">Recursos</a></li>
+        <li><a href="#pricing"  class="navbar__link">Preços</a></li>
+        <li><a href="#contact"  class="navbar__link">Contato</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="#contact" class="btn btn-outline">Falar com vendas</a>
+        <a href="#pricing" class="btn btn-primary">Começar grátis</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile FORA do navbar para evitar stacking issues -->
+  <div class="navbar__mobile-menu" id="navbar-mobile-menu">
+    <ul class="navbar__mobile-links">
+      <li><a href="#features" class="navbar__link">Recursos</a></li>
+      <li><a href="#pricing"  class="navbar__link">Preços</a></li>
+      <li><a href="#contact"  class="navbar__link">Contato</a></li>
+    </ul>
+    <div class="navbar__mobile-actions">
+      <a href="#contact" class="btn btn-outline">Falar com vendas</a>
+      <a href="#pricing" class="btn btn-primary">Começar grátis</a>
+    </div>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="badge">Novo — Proteção para protocolos MCP</span>
+
+        <h1 class="hero__title">
+          Segurança inteligente<br />
+          para suas <span class="text-gradient">APIs de IA</span>
+        </h1>
+
+        <p class="hero__description">
+          O ShieldAI monitora, filtra e bloqueia em tempo real prompts maliciosos,
+          tentativas de jailbreak e acessos não autorizados aos seus modelos de linguagem.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#pricing" class="btn btn-primary btn-lg">
+            Começar gratuitamente
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#features" class="btn btn-outline btn-lg">Ver como funciona</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-value">99.9<span class="text-gradient">%</span></span>
+            <span class="hero__stat-label">Uptime garantido</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">&lt;2<span class="text-gradient">ms</span></span>
+            <span class="hero__stat-label">Latência média</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">10M<span class="text-gradient">+</span></span>
+            <span class="hero__stat-label">Requests protegidos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__terminal">
+          <div class="hero__terminal-bar">
+            <span class="hero__terminal-dot" style="background:#ff5f57"></span>
+            <span class="hero__terminal-dot" style="background:#febc2e"></span>
+            <span class="hero__terminal-dot" style="background:#28c840"></span>
+            <span class="hero__terminal-title">shield-monitor.log</span>
+          </div>
+          <div class="hero__terminal-body">
+            <div class="hero__log hero__log--ok">
+              <span class="hero__log-time">09:41:02</span>
+              <span class="hero__log-status hero__log-status--ok">ALLOW</span>
+              <span class="hero__log-msg">GET /api/v1/chat — user_id: u_8821</span>
+            </div>
+            <div class="hero__log hero__log--ok">
+              <span class="hero__log-time">09:41:03</span>
+              <span class="hero__log-status hero__log-status--ok">ALLOW</span>
+              <span class="hero__log-msg">POST /api/v1/complete — user_id: u_4492</span>
+            </div>
+            <div class="hero__log hero__log--warn">
+              <span class="hero__log-time">09:41:05</span>
+              <span class="hero__log-status hero__log-status--warn">WARN</span>
+              <span class="hero__log-msg">Prompt injection detectado — score: 0.74</span>
+            </div>
+            <div class="hero__log hero__log--block">
+              <span class="hero__log-time">09:41:05</span>
+              <span class="hero__log-status hero__log-status--block">BLOCK</span>
+              <span class="hero__log-msg">Jailbreak attempt — ip: 185.220.x.x</span>
+            </div>
+            <div class="hero__log hero__log--ok">
+              <span class="hero__log-time">09:41:07</span>
+              <span class="hero__log-status hero__log-status--ok">ALLOW</span>
+              <span class="hero__log-msg">GET /api/v1/chat — user_id: u_1103</span>
+            </div>
+            <div class="hero__log hero__log--block">
+              <span class="hero__log-time">09:41:09</span>
+              <span class="hero__log-status hero__log-status--block">BLOCK</span>
+              <span class="hero__log-msg">Admin escalation — requer autenticação</span>
+            </div>
+            <div class="hero__log hero__log--ok hero__log--cursor">
+              <span class="hero__log-time">09:41:11</span>
+              <span class="hero__log-status hero__log-status--ok">ALLOW</span>
+              <span class="hero__log-msg">POST /api/v1/complete — user_id: u_7730<span class="cursor">▋</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── FEATURES ── -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Recursos</span>
+        <h2>Proteção em todas as camadas</h2>
+        <p>Do prompt à resposta, o ShieldAI atua em cada etapa da sua pipeline de IA.</p>
+      </div>
+
+      <div class="features__grid">
+
+        <!-- Linha 1: full width -->
+        <div class="feature-card feature-card--full">
+          <div class="feature-card__icon"><img src="assets/images/shield.png" alt="Shield" /></div>
+          <h3>Detecção de Prompt Injection</h3>
+          <p>Motor de análise semântica identifica tentativas de manipulação em tempo real, com score de risco e bloqueio automático configurável.</p>
+          <div class="feature-card__tag mono-tag">&lt;shield.detect /&gt;</div>
+        </div>
+
+        <!-- Linha 2: 3 cards -->
+        <div class="feature-card">
+          <div class="feature-card__icon"><img src="assets/images/cadeado.png" alt="Cadeado" /></div>
+          <h3>Autenticação por Roles</h3>
+          <p>Controle granular de quem pode executar quais ações, com integração nativa ao Keycloak e provedores OAuth.</p>
+          <div class="feature-card__tag mono-tag">&lt;auth.roles /&gt;</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon"><img src="assets/images/raio.png" alt="Raio" /></div>
+          <h3>Rate Limiting Inteligente</h3>
+          <p>Proteção contra abuso e scraping com limites dinâmicos por usuário, IP e endpoint.</p>
+          <div class="feature-card__tag mono-tag">&lt;rate.limit /&gt;</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon"><img src="assets/images/prancheta.png" alt="Dashboard" /></div>
+          <h3>Dashboard em Tempo Real</h3>
+          <p>Visualize ameaças, requests bloqueados e padrões de ataque com logs detalhados e alertas instantâneos.</p>
+          <div class="feature-card__tag mono-tag">&lt;monitor.live /&gt;</div>
+        </div>
+
+        <!-- Linha 3: full width -->
+        <div class="feature-card feature-card--full">
+          <div class="feature-card__icon"><img src="assets/images/robo.png" alt="Robô" /></div>
+          <h3>Proteção para Protocolos MCP</h3>
+          <p>Segurança nativa para o Model Context Protocol — filtra ferramentas maliciosas, valida intenções e exige autenticação de administrador para ações críticas.</p>
+          <div class="feature-card__tag mono-tag">&lt;mcp.secure /&gt;</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── PRICING ── -->
+  <section class="pricing section" id="pricing">
+    <div class="pricing__orb"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Preços</span>
+        <h2>Simples e transparente</h2>
+        <p>Comece grátis. Escale conforme crescer. Sem surpresas na fatura.</p>
+      </div>
+
+      <div class="pricing__grid">
+
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <span class="pricing-card__tier">Starter</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">R$</span>
+              <span class="pricing-card__amount">0</span>
+              <span class="pricing-card__period">/mês</span>
+            </div>
+            <p class="pricing-card__desc">Para projetos pessoais e MVPs.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature pricing-card__feature--ok">50.000 requests/mês</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Detecção de prompt injection</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Rate limiting básico</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Logs por 7 dias</li>
+            <li class="pricing-card__feature pricing-card__feature--no">Autenticação por roles</li>
+            <li class="pricing-card__feature pricing-card__feature--no">Proteção MCP</li>
+            <li class="pricing-card__feature pricing-card__feature--no">Suporte prioritário</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Começar grátis</a>
+        </div>
+
+        <!-- Pro (destaque) -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__popular">Mais popular</div>
+          <div class="pricing-card__header">
+            <span class="pricing-card__tier">Pro</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">R$</span>
+              <span class="pricing-card__amount">297</span>
+              <span class="pricing-card__period">/mês</span>
+            </div>
+            <p class="pricing-card__desc">Para startups e produtos em crescimento.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature pricing-card__feature--ok">2.000.000 requests/mês</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Detecção avançada de jailbreak</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Rate limiting inteligente</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Logs por 90 dias</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Autenticação por roles</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Proteção MCP</li>
+            <li class="pricing-card__feature pricing-card__feature--no">SLA 99.99% garantido</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Assinar Pro</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <span class="pricing-card__tier">Enterprise</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount pricing-card__amount--custom">Custom</span>
+            </div>
+            <p class="pricing-card__desc">Para empresas com requisitos avançados.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature pricing-card__feature--ok">Requests ilimitados</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Modelos de detecção customizados</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Deploy on-premise ou cloud</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Logs ilimitados + SIEM</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">SSO + Keycloak dedicado</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">Proteção MCP avançada</li>
+            <li class="pricing-card__feature pricing-card__feature--ok">SLA 99.99% + suporte 24/7</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Falar com vendas</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── FORMULÁRIO ── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__info">
+          <span class="badge">Contato</span>
+          <h2>Pronto para proteger<br />sua <span class="text-gradient">IA</span>?</h2>
+          <p>Fale com nossa equipe e descubra qual plano faz mais sentido para o seu projeto.</p>
+
+          <ul class="contact__list">
+            <li class="contact__item">
+              <span class="contact__item-icon"><img src="assets/images/raio.png" alt="Raio" /></span>
+              <span>Resposta em menos de 24h</span>
+            </li>
+            <li class="contact__item">
+              <span class="contact__item-icon"><img src="assets/images/cadeado.png" alt="Cadeado" /></span>
+              <span>Demo gratuita de 14 dias</span>
+            </li>
+            <li class="contact__item">
+              <span class="contact__item-icon"><img src="assets/images/mao.png" alt="Handshake" /></span>
+              <span>Sem compromisso de contrato</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__form-wrap">
+          <form class="contact__form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="name">Nome completo</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Felipe Moya" required />
+              <span class="form-error" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">E-mail corporativo</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="felipe@empresa.com" required />
+              <span class="form-error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="company">Empresa</label>
+              <input class="form-input" type="text" id="company" name="company" placeholder="Minha Startup" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="plan">Plano de interesse</label>
+              <select class="form-input form-select" id="plan" name="plan">
+                <option value="">Selecione um plano...</option>
+                <option value="starter">Starter — Grátis</option>
+                <option value="pro">Pro — R$ 297/mês</option>
+                <option value="enterprise">Enterprise — Custom</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Mensagem</label>
+              <textarea class="form-input form-textarea" id="message" name="message" placeholder="Conte um pouco sobre seu projeto e como podemos ajudar..." rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" id="submit-btn">
+              Enviar mensagem
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <div class="form-success" id="form-success">
+              ✅ Mensagem enviada! Entraremos em contato em breve.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="divider"></div>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="navbar__logo">
+          <img src="assets/images/logo.png" alt="ShieldAI" class="navbar__logo-img" />
+        </a>
+        <p>Segurança inteligente para a próxima geração de aplicações com IA.</p>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <span class="footer__col-title">Produto</span>
+          <a href="#features">Recursos</a>
+          <a href="#pricing">Preços</a>
+          <a href="#contact">Demo</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__col-title">Legal</span>
+          <a href="#">Privacidade</a>
+          <a href="#">Termos de uso</a>
+          <a href="#">Segurança</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__col-title">Contato</span>
+          <a href="mailto:contato@shieldai.com.br">contato@shieldai.com.br</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© 2025 ShieldAI. Todos os direitos reservados.</span>
+      <span class="mono-tag">v1.0.0</span>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+:root {
+  /* ── Cores base ── */
+  --color-bg-primary:    #0a0a0f;
+  --color-bg-secondary:  #0f0f1a;
+  --color-bg-card:       #13131f;
+  --color-bg-elevated:   #1a1a2e;
+
+  /* ── Gradientes de marca ── */
+  --gradient-primary:    linear-gradient(135deg, #00c2ff 0%, #7b2fff 100%);
+  --gradient-secondary:  linear-gradient(135deg, #7b2fff 0%, #ff2d78 100%);
+  --gradient-glow:       linear-gradient(135deg, rgba(0,194,255,0.15) 0%, rgba(123,47,255,0.15) 100%);
+  --gradient-hero:       radial-gradient(ellipse 80% 60% at 50% 0%, rgba(123,47,255,0.25) 0%, transparent 70%);
+
+  /* ── Cores de acento ── */
+  --color-cyan:          #00c2ff;
+  --color-purple:        #7b2fff;
+  --color-pink:          #ff2d78;
+  --color-cyan-muted:    rgba(0, 194, 255, 0.15);
+  --color-purple-muted:  rgba(123, 47, 255, 0.15);
+
+  /* ── Texto ── */
+  --color-text-primary:   #f0f0ff;
+  --color-text-secondary: #9090b0;
+  --color-text-muted:     #55556a;
+
+  /* ── Bordas ── */
+  --color-border:         rgba(255, 255, 255, 0.08);
+  --color-border-hover:   rgba(0, 194, 255, 0.35);
+  --color-border-active:  rgba(123, 47, 255, 0.6);
+
+  /* ── Tipografia ── */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* ── Escala de fonte ── */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+  --text-7xl:  4.5rem;
+
+  /* ── Espaçamentos ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ── Border radius ── */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   32px;
+  --radius-full: 9999px;
+
+  /* ── Sombras ── */
+  --shadow-sm:     0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md:     0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg:     0 20px 48px rgba(0, 0, 0, 0.6);
+  --shadow-cyan:   0 0 30px rgba(0, 194, 255, 0.2);
+  --shadow-purple: 0 0 30px rgba(123, 47, 255, 0.25);
+  --shadow-glow:   0 0 60px rgba(123, 47, 255, 0.15);
+
+  /* ── Transições ── */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+  --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --max-width:       1200px;
+  --nav-height:      72px;
+  --section-padding: var(--space-24);
+}
